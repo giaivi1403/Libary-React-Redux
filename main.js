@@ -1,3 +1,4 @@
 import { attach, connect } from "./store.js";
+import App from "./components/App.js";
 
-attach(() => "<div>hello</div>", document.querySelector("#root"));
+attach(App, document.querySelector("#root"));

@@ -1,6 +1,6 @@
 export default function html([first, ...strings], ...args) {
     return args
-        .reduce((acc, cur) => acc.concat(cur, strings.shift()))
+        .reduce((acc, cur) => acc.concat(cur, strings.shift()), [first])
         .filter((x) => (x && x !== true) || x === 0)
         .join("");
 }

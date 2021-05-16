@@ -1,5 +1,9 @@
 const init = {
-    name: "Giai Vi",
+    product: {
+        name: "Nike Air",
+        description: "Nike Air Force 1",
+        price: 30000,
+    },
 };
 
 export default function reducer(state = init, action, args) {
