@@ -3,15 +3,14 @@ import { connect } from "../store.js";
 
 const connector = connect();
 
-function App({ product }) {
+function App({ sample }) {
     return html`
         <ul>
-            <li>
-                <h3>${product.name}</h3>
-                <h2>${product.description}</h2>
-                <p>${product.price}</p>
-            </li>
+            ${sample.map((x) => `<li>${x}</li>`)}
         </ul>
+        <button onclick="dispatch('ADD', 'Dispatch Successfully')">
+            Click Me
+        </button>
     `;
 }
 
